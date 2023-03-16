@@ -1,0 +1,56 @@
+id: final screen
+decoration: pen-to-square
+event: confirmation_and_download
+question: |
+  # <i class="fa-thin fa-list"></i>Your Personal Action Plan is ready!
+subquestion: |
+  
+  Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps.
+ 
+  % for iteration_index, step_tuple in enumerate( step_list ):
+  ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
+  % endfor
+  
+   ${ al_user_bundle.download_list_html() }
+buttons:
+  - Start over: restart
+---
+code: |
+  step_list = []
+  for iter_idx, step_tuple in enumerate( step_list ):
+    define(step_tuple[ 1 ], iter_idx + 1)
+  get_steps = True
+---
+template: wrong_tf
+subject: |
+  Step ${ wrong_tf_idx }: Try another Guided Assistant
+content: | 
+  * [Asking for Child Support](https://docassemble.akcourts.gov/start/AskingForChildSupport)
+  * [Starting A Case to End Your Marriage](https://LegalNav.org/guided_assistant/starting-a-case-to-end-your-marriage/?location=alaska)
+  * [Responding if Your Spouse Starts a Case to End Your Marriage](https://LegalNav.org/guided_assistant/responding-if-your-spouse-wants-to-or-starts-a-case-to-end-your-marriage/?location=alaska)
+  * [Responding if Your Spouse Starts a Custody Case](https://LegalNav.org/guided_assistant/responding-if-your-spouse-wants-to-or-starts-a-custody-case/?location=Alaska)
+  * [Enforcing a Custody Order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
+  * [Changing a Custody Order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
+--- 
+template: wrong_tf2
+subject: | 
+  Step ${ wrong_tf2_idx }: Look at the court's self-help web pages
+content: | 
+  * [Forms and Information about Child Support](https://courts.alaska.gov/shc/family/support.htm)
+  * [Asking for an Order / filing a motion](https://courts.alaska.gov/shc/family/motions.htm)
+  * [Family Law Home](https://courts.alaska.gov/shc/family/index.htm)
+---
+template: get_help
+subject: |
+  Step ${ get_help_idx }: Get more information or help
+content: |
+  For help with forms or understanding the process, call the [Family Law Self-Help Center](https://courts.alaska.gov/shc/family/selfhelp.htm)
+  (907) 264-0851 or
+  (866) 279-0851 from an Alaska-based phone outside of Anchorage.
+  
+  Many lawyers offer free or flat fee consultations without having to hire them for the whole case. [Find a Lawyer](https://courts.alaska.gov/shc/shclawyer.htm).
+  
+  Depending on your income, you may qualify for [Alaska Free Legal Answers](https://legalnav.org/resource/alaska-free-legal-answers).
+  
+  Depending on your income and circumstances, you may qualify for a free lawyer from [Alaska Legal Services](alsc-law.org/apply-for-services).
+---
