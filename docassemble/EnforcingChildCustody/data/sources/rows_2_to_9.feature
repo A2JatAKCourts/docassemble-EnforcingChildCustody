@@ -5,7 +5,7 @@ Feature: User paths
 Scenario: Row #2
     Given I start the interview at "enforcing-child-custody.yml"
     And I get to the question id "final screen" with this data:
-      | var | value | trigger | |
+      | var | value | trigger | 
       | order_type['None'] | True | |  
     And I take a screenshot
     And I should see the phrase "Try another Guided Assistant"  
@@ -17,7 +17,7 @@ Scenario: Row #2
 Scenario: Row #9
     Given I start the interview at "enforcing-child-custody.yml"
     And I get to the question id "final screen" with this data:
-      | var | value | trigger | |
+      | var | value | trigger | 
       | order_type['child support'] | True | |
       | order_type['other'] | True | |
       | order_type['visitation'] | True | |
