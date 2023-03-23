@@ -5,10 +5,8 @@ Feature: User paths
 Scenario: Row #2
     Given I start the interview at "enforcing-child-custody.yml"
     And I get to the question id "final screen" with this data:
-      | var | value | trigger |
-      | order_type['child suppport'] | False |  |
-      | order_type['visitation'] | False |  |
-      | order_type['other'] | False |  |
+      | var | value | trigger | |
+      | order_type['None'] | True |  |
     And I take a screenshot
     And I should see the phrase "Try another Guided Assistant"  
     And I should see the phrase "Look at the court’s self-help web pages"
