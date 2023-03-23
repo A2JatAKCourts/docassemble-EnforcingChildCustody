@@ -75,10 +75,10 @@ comment: |
   Delete mandatory: True to include in another interview
 mandatory: True
 code: |
-  al_intro_screen
-  EnforcingChildCustody_intro
-  interview_order_enforcing_child_custody
-  signature_date
+  # al_intro_screen
+  # EnforcingChildCustody_intro
+  # interview_order_enforcing_child_custody
+  # signature_date
   # Store anonymous data for analytics / statistics
   store_variables_snapshot(
       persistent=True,
@@ -112,9 +112,30 @@ fields:
     datatype: checkboxes
     choices:
       - "Child support": child support
-      - "Visitation schedule": visitation schedule
+      - "Visitation schedule": visitation
       - "An other part that has no money involved": other
-      - "None of these": none
+---
+id: who ordered
+question: |
+  Who ordered your child support?
+subquestion: |
+  If your children’s other parent is not paying the Child Support they were ordered to pay, you can ask CSSD or the Court for help.
+fields:
+  - no label: who_ordered
+    input type: radio
+    choices:
+      - The court.: court
+      - Child Support Services Division (CSSD).: cssd
+  - note: |
+      #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
+    
+      <div class = 'step-subheading'>From original:</div>
+        If the court ordered Child Support they probably used the 9 page Child Support Order form. Look for the form number in the lower left corner of your order. 
+
+       <div class = 'step-subheading'>From  changing child support interview</div>
+        *	Look at the top of your child support order to see if it was ordered by the Alaska Court System or Child Support Services Division.
+        * Look for your name in [CourtView](https://records.courts.alaska.gov/eaccess/home.page.2), the Alaska Court System’s list of public court cases. Open up your divorce or custody case.  See if there is an entry for a “child support order
+        * Contact [Child Support Services Division](https://childsupport.alaska.gov/child-support-services/contact-us) and ask them.
 ---
 id: preview EnforcingChildCustody
 question: |
@@ -190,10 +211,10 @@ objects:
 #  skip undefined: True
 ---
 attachment:
-  name: EnforcingChildCustody
-  filename: enforcing_child_custody_action_plan
-  variable name: enforcing_child_custody_attachmentt[i]
-  skip undefined: True
-  docx template file: EnforcingChildCustody.docx
+  - name: Enforcing Child Custody
+    filename: enforcing_child_custody_action_plan
+    variable name: enforcing_child_custody_attachment[i]
+    skip undefined: True
+    docx template file: enforcing_child_custody_action_plan.docx
 
 
