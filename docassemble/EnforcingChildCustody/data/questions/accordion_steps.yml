@@ -21,14 +21,13 @@ code: |
   if order_type.all_false():
     step_list.append((wrong_tf, "wrong_tf_idx"))
     step_list.append((wrong_tf2, "wrong_tf2_idx"))
+    step_list.append((get_help, "get_help_idx"))
   else:
     if order_type['child support']:
       step_list.append((child_support_step, "child_support_idx"))
     if order_type['visitation']:
-      step_list.append((child_support_step, "child_support_idx"))
       step_list.append((visitation_step, "visitation_idx"))
     if order_type['other']:
-      step_list.append((child_support_step, "child_support_idx"))
       step_list.append((other_order_step, "other_order_idx"))
   
     step_list.append((get_help, "get_help_idx"))
@@ -74,7 +73,7 @@ content: |
   
   Many lawyers offer free or flat fee consultations without having to hire them for the whole case. [Find a Lawyer](https://courts.alaska.gov/shc/shclawyer.htm).
   
-  Depending on your income, you may qualify for [Alaska Free Legal Answers](https://legalnav.org/resource/alaska-free-legal-answers).
+  Depending on your income, you may qualify for [Alaska Free Legal Answers](https://alaska.freelegalanswers.org/).
   
   Depending on your income and circumstances, you may qualify for a free lawyer from [Alaska Legal Services](alsc-law.org/apply-for-services).
 ---
@@ -103,12 +102,14 @@ subject: |
   Step ${ other_parts_idx }: Learn about other parts of a custody case
 content: |
   <div class='step-subheading'>More Guided Assistants</div>
-  [Responding if your spouse starts, a custody case](https://docassemble.akcourts.gov/start/RespondingInChildCustody)
-  [Changing a custody order](https://docassemble.akcourts.gov/start/ChangingChildCustody)
+  <p><a href = "https://docassemble.akcourts.gov/start/RespondingInChildCustody">Responding if your spouse starts a custody case</a></p>
+    <p><a href = "https://docassemble.akcourts.gov/start/ChangingChildCustody">Changing a custody order</a></p>
+    
   <div class='step-subheading'>Self-Help Center: Family Law</div>
-  Responding to a Custody Case](https://courts.alaska.gov/shc/family/answer.htm)
-  Asking for an Order/filing a motion](https://courts.alaska.gov/shc/family/motions.htm)
-  Creating a Parenting Plan](https://courts.alaska.gov/shc/family/shcplan.htm)
-  Getting Ready for a Hearing or Trial](https://courts.alaska.gov/shc/family/shctrial.htm)
-  Changing a Custody / Support Order](https://courts.alaska.gov/shc/family/shcmodify.htm)
+  
+  <p><a href = "https://courts.alaska.gov/shc/family/answer.htm">Responding to a Custody Case</a></p>
+  <p><a href = "https://courts.alaska.gov/shc/family/motions.htm">Asking for an Order/filing a motion</a></p>
+  <p><a href = "https://courts.alaska.gov/shc/family/shcplan.htm">Creating a Parenting Plan</a></p>
+  <p><a href = "https://courts.alaska.gov/shc/family/shctrial.htm">Getting Ready for a Hearing or Trial</a></p>
+  <p><a href = "https://courts.alaska.gov/shc/family/shcmodify.htm">Changing a Custody / Support Order</a></p>
 
