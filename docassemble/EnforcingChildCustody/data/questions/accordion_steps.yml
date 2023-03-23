@@ -25,25 +25,27 @@ code: |
     if order_type['child support']:
       step_list.append((child_support_step, "child_support_idx"))
     if order_type['visitation']:
+      step_list.append((child_support_step, "child_support_idx"))
       step_list.append((visitation_step, "visitation_idx"))
     if order_type['other']:
+      step_list.append((child_support_step, "child_support_idx"))
       step_list.append((other_order_step, "other_order_idx"))
   
     step_list.append((get_help, "get_help_idx"))
+    step_list.append((other_parts_step, "other_parts_idx"))
+    
   for iter_idx, step_tuple in enumerate( step_list ):
     define(step_tuple[ 1 ], iter_idx + 1)
   get_steps = True
 ---
 template: wrong_tf
 subject: |
-  Step ${ wrong_tf_idx }: Try another Guided Assistant
+  Step ${ wrong_tf_idx }: Try another Guided Assistant interview
 content: | 
-  * [Asking for Child Support](https://docassemble.akcourts.gov/start/AskingForChildSupport)
-  * [Starting A Case to End Your Marriage](https://LegalNav.org/guided_assistant/starting-a-case-to-end-your-marriage/?location=alaska)
-  * [Responding if Your Spouse Starts a Case to End Your Marriage](https://LegalNav.org/guided_assistant/responding-if-your-spouse-wants-to-or-starts-a-case-to-end-your-marriage/?location=alaska)
-  * [Responding if Your Spouse Starts a Custody Case](https://LegalNav.org/guided_assistant/responding-if-your-spouse-wants-to-or-starts-a-custody-case/?location=Alaska)
-  * [Enforcing a Custody Order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
-  * [Changing a Custody Order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
+  * [Changing your custody or Parenting Plan order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
+  * [Responding if Your Spouse Starts a Custody Case](https://docassemble.akcourts.gov/start/docassemble-RespondingChildCustody)
+  * [Asking for for a Custody Order](https://ddocassemble.AKcourts.gov/start/AskingForChildCustody)
+  * [Changing or Enforcing Child Support ](https://docassemble.AKcourts.gov/start/ ChangingEnforcingChildSupport)
 --- 
 template: wrong_tf2
 subject: | 
@@ -51,7 +53,14 @@ subject: |
 content: | 
   * [Forms and Information about Child Support](https://courts.alaska.gov/shc/family/support.htm)
   * [Asking for an Order / filing a motion](https://courts.alaska.gov/shc/family/motions.htm)
-  * [Family Law Home](https://courts.alaska.gov/shc/family/index.htm)
+  * [Family Law Home](https://courts.alaska.gov/shc/family)
+  
+  <div class = ''>And yet to be developed or discovered</div>
+    * Custody When Both Parents Agree
+    * Resources to Help You and the Other Parent Reach an Agreement 
+    * Asking for an Order in a Custody Case When the Issue Can’t Wait for the Court’s Final Decision (Filing a Motion)
+    * Creating a Parenting Plan
+    * Preparing for Custody Hearings or Trial
 ---
 template: get_help
 subject: |
@@ -73,30 +82,29 @@ template: child_support_step
 subject: |
   Step ${ child_support_idx }: Enforcing a child support order
 content: |
-  Get information about enforcing a child support order. [Enforce a Child Support Order](http://courts.alaska.gov/shc/family/shcenforce.htm#child-support).
+  Get information from the court website about enforcing a child support order: [Enforce a Child Support Order](http://courts.alaska.gov/shc/family/shcenforce.htm#child-support).
   
-  See the Guided Assistant [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforccingChildSupport).
+  SUse the Guided Assistant interview: [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforccingChildSupport).
 ---
 template: visitation_step
 subject: |
-  Step ${ visitation_idx }: Enforcing a child support order
+  Step ${ visitation_idx }: Enforcing a visitation schedule order
 content: |
-  Get information about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](http://courts.alaska.gov/shc/family/shcenforce.htm#visits).
+  Get information from the court website about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](http://courts.alaska.gov/shc/family/shcenforce.htm#visits).
 ---
 template: other_order_step
 subject: |
   Step ${ other_order_idx }: Enforcing an other court order
 content: |
-  Get information about enforcing an other court order. [Enforce an Order (not money)](http://courts.alaska.gov/shc/family/shcenforce.htm#forms).
+  Get information from the court website about enforcing an other court order. [Enforce an Order (not money)](http://courts.alaska.gov/shc/family/shcenforce.htm#forms).
 ---
 template: other_parts_step
 subject: |
   Step ${ other_parts_idx }: Learn about other parts of a custody case
 content: |
   <div class='step-subheading'>More Guided Assistants</div>
-  Responding if your spouse starts, a custody case
-  Enforcing a custody order
-  Changing a custody order
+  [Responding if your spouse starts, a custody case](https://docassemble.akcourts.gov/start/RespondingInChildCustody)
+  [Changing a custody order](https://docassemble.akcourts.gov/start/ChangingChildCustody)
   <div class='step-subheading'>Self-Help Center: Family Law</div>
   Responding to a Custody Case](https://courts.alaska.gov/shc/family/answer.htm)
   Asking for an Order/filing a motion](https://courts.alaska.gov/shc/family/motions.htm)
