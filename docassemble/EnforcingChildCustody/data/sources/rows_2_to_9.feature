@@ -18,7 +18,7 @@ Scenario: Row #3
     Given I start the interview at "enforcing-child-custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger |
-      | order_type['child suppport'] | True |  |    
+      | order_type['child support'] | True |  |    
     And I take a screenshot
     And I should see the phrase "Enforcing a child support order"
     And I should see the phrase "Get more information or help"
