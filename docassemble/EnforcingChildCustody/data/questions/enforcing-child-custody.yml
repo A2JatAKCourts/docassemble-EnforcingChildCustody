@@ -113,7 +113,7 @@ fields:
     choices:
       - "Child support": child support
       - "Visitation schedule": visitation
-      - "An other part that has no money involved": other
+      - "Another order that is not about money or our visitation schedule": other
 ---
 id: who ordered
 question: |
