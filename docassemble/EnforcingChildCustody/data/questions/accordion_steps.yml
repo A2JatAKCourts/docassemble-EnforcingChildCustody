@@ -78,7 +78,7 @@ content: |
 ---
 template: other_order_step
 subject: |
-  Step ${ other_order_idx }: Enforcing an other court order
+  Step ${ other_order_idx }: Enforcing another court order
 content: |
   Get information from the court website about enforcing an other court order. [Enforce an Order (not money)](https://courts.alaska.gov/shc/family/shcenforce.htm#forms).
 ---
