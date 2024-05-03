@@ -44,7 +44,7 @@ Scenario: Row #5
       | var | value | trigger | 
       | order_type['other'] | True | |
     And I take a screenshot
-    And I should see the phrase "Enforcing an other court order"
+    And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
 #   And I should see the phrase "Learn about other parts of a custody case"
     And I download "enforcing_child_custody_action_plan.pdf"
@@ -72,7 +72,7 @@ Scenario: Row #7
       | order_type['other'] | True | |
     And I take a screenshot
     And I should see the phrase "Enforcing a child support order"
-    And I should see the phrase "Enforcing an other court order"
+    And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
 #   And I should see the phrase "Learn about other parts of a custody case"
     And I download "enforcing_child_custody_action_plan.pdf"
@@ -88,7 +88,7 @@ Scenario: Row #8
       | order_type['other'] | True | |
     And I take a screenshot
     And I should see the phrase "Enforcing a visitation schedule order"
-    And I should see the phrase "Enforcing an other court order"
+    And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
 #   And I should see the phrase "Learn about other parts of a custody case"
     And I download "enforcing_child_custody_action_plan.pdf"
@@ -104,7 +104,7 @@ Scenario: Row #9
     And I take a screenshot
     And I should see the phrase "Enforcing a child support order"
     And I should see the phrase "Enforcing a visitation schedule order"
-    And I should see the phrase "Enforcing an other court order"
+    And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
 #   And I should see the phrase "Learn about other parts of a custody case"
     And I download "enforcing_child_custody_action_plan.pdf"
