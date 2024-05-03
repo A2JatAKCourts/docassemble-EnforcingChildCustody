@@ -11,7 +11,7 @@ Want to disable the tests? Want to learn more? See ALKiln's docs: https://suffol
 
 @enforcingchildcustody
 Scenario: enforcing_child_custody.yml runs
-  Given I start the interview at "enforcing-child-custody.yml"
+  Given I start the interview at "enforcing_child_custody.yml"
   #And the maximum seconds for each Step in this Scenario is 50
   #And I get to the question id "downloads" with this data:
   #  | var | value | trigger |
