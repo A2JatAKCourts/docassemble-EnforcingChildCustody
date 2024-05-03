@@ -17,6 +17,7 @@ buttons:
 ---
 code: |
   step_list = []
+  user_need = 'enforce custody order'
   
   if order_type.all_false():
     step_list.append((wrong_tf, "wrong_tf_idx"))
@@ -31,7 +32,7 @@ code: |
       step_list.append((other_order_step, "other_order_idx"))
   
     step_list.append((get_help, "get_help_idx"))
-    step_list.append((other_parts_step, "other_parts_idx"))
+    # step_list.append((other_parts_step, "other_parts_idx"))
     
   for iter_idx, step_tuple in enumerate( step_list ):
     define(step_tuple[ 1 ], iter_idx + 1)
@@ -61,41 +62,25 @@ content: |
     * Creating a Parenting Plan
     * Preparing for Custody Hearings or Trial
 ---
-template: get_help
-subject: |
-  Step ${ get_help_idx }: Get more information or help
-content: |
-  Read more about enforcing orders. [Enforcing your order](http://www.courts.alaska.gov/shc/family/shcenforce.htm).
-  
-  For help with forms or understanding the process, call the [Family Law Self-Help Center](https://courts.alaska.gov/shc/family/selfhelp.htm)
-  (907) 264-0851 or
-  (866) 279-0851 from an Alaska-based phone outside of Anchorage.
-  
-  Many lawyers offer free or flat fee consultations without having to hire them for the whole case. [Find a Lawyer](https://courts.alaska.gov/shc/shclawyer.htm).
-  
-  Depending on your income, you may qualify for [Alaska Free Legal Answers](https://alaska.freelegalanswers.org/).
-  
-  Depending on your income and circumstances, you may qualify for a free lawyer from [Alaska Legal Services](alsc-law.org/apply-for-services).
----
 template: child_support_step
 subject: |
   Step ${ child_support_idx }: Enforcing a child support order
 content: |
   Get information from the court website about enforcing a child support order: [Enforce a Child Support Order](http://courts.alaska.gov/shc/family/shcenforce.htm#child-support).
   
-  SUse the Guided Assistant interview: [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforccingChildSupport).
+  Use the Guided Assistant interview: [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforcingChildSupport).
 ---
 template: visitation_step
 subject: |
   Step ${ visitation_idx }: Enforcing a visitation schedule order
 content: |
-  Get information from the court website about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](http://courts.alaska.gov/shc/family/shcenforce.htm#visits).
+  Get information from the court website about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](https://courts.alaska.gov/shc/family/shcenforce.htm#visits).
 ---
 template: other_order_step
 subject: |
   Step ${ other_order_idx }: Enforcing an other court order
 content: |
-  Get information from the court website about enforcing an other court order. [Enforce an Order (not money)](http://courts.alaska.gov/shc/family/shcenforce.htm#forms).
+  Get information from the court website about enforcing an other court order. [Enforce an Order (not money)](https://courts.alaska.gov/shc/family/shcenforce.htm#forms).
 ---
 template: other_parts_step
 subject: |

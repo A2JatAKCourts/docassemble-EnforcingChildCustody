@@ -3,7 +3,7 @@ Feature: User paths
 
 @row2
 Scenario: Row #2
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['None'] | True | |  
@@ -15,7 +15,7 @@ Scenario: Row #2
     
 @row3
 Scenario: Row #3
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['child support'] | True | |
@@ -27,7 +27,7 @@ Scenario: Row #3
     
 @row4
 Scenario: Row #4
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['visitation'] | True | |
@@ -39,7 +39,7 @@ Scenario: Row #4
     
 @row5
 Scenario: Row #5
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['other'] | True | |
@@ -51,7 +51,7 @@ Scenario: Row #5
 
 @row6
 Scenario: Row #6
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['child support'] | True | |
@@ -65,7 +65,7 @@ Scenario: Row #6
 
 @row7
 Scenario: Row #7
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['child support'] | True | |
@@ -81,7 +81,7 @@ Scenario: Row #7
 
 @row8
 Scenario: Row #8
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['visitation'] | True | |
@@ -95,7 +95,7 @@ Scenario: Row #8
     
 @row9
 Scenario: Row #9
-    Given I start the interview at "enforcing-child-custody.yml"
+    Given I start the interview at "enforcing_child_custody.yml"
     And I get to the question id "final screen" with this data:
       | var | value | trigger | 
       | order_type['child support'] | True | |

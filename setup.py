@@ -44,7 +44,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.EnforcingChildCustody',
-      version='2023.03.24',
+      version='2023.05.03',
       description=('Enforcing child custody action plan'),
       long_description='# docassemble.Enforcingchildcustody\r\n\r\nEnforcing child custody action plan\r\n\r\n## Author\r\n\r\nCaroline Robinson\r\nJeannie Sato\r\n\r\n',
       long_description_content_type='text/markdown',
@@ -54,7 +54,7 @@ setup(name='docassemble.EnforcingChildCustody',
       url='https://courtformsonline.org',
       packages=find_packages(),
       namespace_packages=['docassemble'],
-      install_requires=['docassemble.AssemblyLine>=2.21.0'],
+      install_requires=['docassemble.AssemblyLine>=2.27.2'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/EnforcingChildCustody/', package='docassemble.EnforcingChildCustody'),
      )
