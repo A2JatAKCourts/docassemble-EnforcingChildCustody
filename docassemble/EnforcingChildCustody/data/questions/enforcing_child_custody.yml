@@ -7,11 +7,11 @@ include:
 ---
 metadata:
   title: |
-    Enforcing your child custody or Parenting Plan order in Alaska
+    Enforcing a Custody Order
   short title: |
-    Enforcing child custody 
+    Enforcing a Custody Order 
   authors:
-    - Caroline Robinson
+    - Alaska Court System - Access to Justice Department
 ---
 mandatory: True
 comment: |
@@ -21,9 +21,9 @@ data:
   al_weaver_version: "1.9.0"
   generated on: "2023-03-16"
   title: >-
-    Enforcing child custody action plan
+    Enforcing a Custody Order
   short title: >-
-    Enforcing child custody action plan
+    Enforcing a Custody Order 
   description: |-
     A Personal Action Plan for enforcing your child custody or Parenting Plan order
   allowed courts: []
