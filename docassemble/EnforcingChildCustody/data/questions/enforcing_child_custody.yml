@@ -53,6 +53,7 @@ code: |
 ---
 objects:
   - users: ALPeopleList.using(ask_number=True,target_number=1)
+  - one_fits_all: DADict
 ---
 #  sections:
 #    - review_EnforcingChildCustody: Review your answers
@@ -218,3 +219,34 @@ attachment:
     variable name: enforcing_child_custody_attachment[i]
     skip undefined: True
     docx template file: enforcing_child_custody_action_plan.docx
+---
+# ALDocument objects specify the metadata for each template
+objects:
+  - enforcing_child_custody_attachment_latex: ALDocument.using(title="Enforcing child custody or Parenting Plan order", filename="enforcing_child_custody_action_plan", enabled=True, has_addendum=False, suffix_to_append="" )
+---
+# Bundles group the ALDocuments into separate downloads, such as for court and for the user
+objects:
+  - al_user_bundle_latex: ALDocumentBundle.using(elements=[enforcing_child_custody_attachment_latex], filename="enforcing_child_custody_action_plan", title="All forms to download for your records", enabled=True)
+  - al_recipient_bundle_latex: ALDocumentBundle.using(elements=[enforcing_child_custody_attachment_latex],  filename="enforcing_child_custody_action_plan", title="All forms to file", enabled=True)
+---
+# Each attachment defines a key in an ALDocument. We use `i` as the placeholder here so the same template is 
+# used for "preview" and "final" keys, and logic in the template checks the value of 
+# `i` to show or hide the user's signature
+#attachment:
+#  name: Post-interview-Instructions
+#  filename: EnforcingChildCustody_next_steps
+#  docx template file: EnforcingChildCustody_next_steps.docx
+#  variable name: EnforcingChildCustody_Post_interview_instructions[i]
+#  skip undefined: True
+---
+attachment:
+  - name: Enforcing Child Custody
+    filename: enforcing_child_custody_action_plan_latex
+    variable name: enforcing_child_custody_attachment_latex
+    skip undefined: True
+    # docx template file: enforcing_child_custody_action_plan.docx
+    content: |
+      ${ one_fits_all['print'] }
+    valid formats:
+      - pdf
+      - tex
