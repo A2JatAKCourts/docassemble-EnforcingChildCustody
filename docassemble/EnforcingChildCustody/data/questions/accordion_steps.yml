@@ -51,13 +51,17 @@ content: |
   % endif
 
   % for iteration_index, step_tuple in enumerate( step_list ):
-  % if i == "screen":
-  ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
-  % else:
-  ${ collapse_template(step_tuple[2], closed_icon="plus", open_icon="minus") }
-  % endif
+  ${ chair( i ) }
   % endfor
-  
+---
+code: |
+  def chair( key ):
+    if key == "print":
+      try:
+        collapse_template(step_tuple[2], closed_icon="plus", open_icon="minus")
+      except Exception:
+        pass
+    return collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus")
 ---
 code: |
   class Boo(object):
