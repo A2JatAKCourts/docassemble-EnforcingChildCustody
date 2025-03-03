@@ -6,12 +6,25 @@ question: |
 subquestion: |
   
   Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps.
+
+  % if "docassembledev" in interview_url():
+  <button id="akc_expand_all" class="btn other stuff">Expand all</button>
+  <button id="akc_collapse_all" class="btn other stuff">Collapse all</button>
+  % endif
  
   % for iteration_index, step_tuple in enumerate( step_list ):
   ${ collapse_template(step_tuple[0], closed_icon="plus", open_icon="minus") }
   % endfor
   
    ${ al_user_bundle.download_list_html() }
+  
+  &nbsp;
+
+  ${ al_user_bundle.send_button_html(show_editable_checkbox=False) }
+  
+  % if "docassembledev" in interview_url():
+  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
+  % endif 
 buttons:
   - Start over: restart
 ---
