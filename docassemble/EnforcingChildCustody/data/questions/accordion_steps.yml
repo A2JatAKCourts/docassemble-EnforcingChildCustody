@@ -1,3 +1,18 @@
+---
+generic object: ALDocumentBundle
+template: x.get_email_copy
+content: |
+  Email a copy of your Action Plan to yourself or someone else
+---
+generic object: ALDocumentBundle
+template: x.send_email_template
+subject: |
+  Your Personal Action Plan for enforcing your child custody order
+content: |
+  Thank you for using the Alaska's Court Guides Action Plans.
+
+  Your Personal Action Plan is attached.
+---
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
@@ -7,7 +22,7 @@ subquestion: |
   
   Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps.
 
-  % if "docassembledev" in interview_url():
+  % if get_config("debug", False):
   <button id="akc_expand_all" class="btn other stuff">Expand all</button>
   <button id="akc_collapse_all" class="btn other stuff">Collapse all</button>
   % endif
@@ -22,11 +37,23 @@ subquestion: |
 
   ${ al_user_bundle.send_button_html(show_editable_checkbox=False) }
   
-  % if "docassembledev" in interview_url():
-  [get the docx file](${ docx_changing_divorce_order_attachment.docx.url_for() })
+  % if get_config("debug", False):
+  [get the docx file](${ docx_enforcing_child_custody_attachment.docx.url_for() })
   % endif 
 buttons:
   - Start over: restart
+script: |
+  <script>
+  let expander = $("#akc_expand_all")
+  expander.on("click", function () {
+   Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className += " show" })
+  })
+  
+  let collapser = $("#akc_collapse_all")
+  collapser.on("click", function () {
+      Array.from(document.querySelectorAll('.al_collapse_template .collapse')).forEach((elem) => { elem.className = elem.className.replace(" show", "" ) })
+  })
+  </script>  
 ---
 code: |
   step_list = []
