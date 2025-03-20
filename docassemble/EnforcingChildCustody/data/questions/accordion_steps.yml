@@ -7,20 +7,23 @@ content: |
 generic object: ALDocumentBundle
 template: x.send_email_template
 subject: |
-  Your Personal Action Plan for enforcing your child custody order
+  Your Action Plan for enforcing your child custody order
 content: |
-  Thank you for using the Alaska's Court Guides Action Plans.
+  Thank you for using the Alaska Court System’s Court Guide Action Plan.
 
-  Your Personal Action Plan is attached.
+  Your Action Plan is attached.
+
+  Get [more information and a list of all the Court Guide Action Plans](https://ak-courts.info/plans).
+  
+  [ak-courts.info/plans](https://ak-courts.info/plans).
 ---
 id: final screen
 decoration: pen-to-square
 event: confirmation_and_download
 question: |
-  # <i class="fa-thin fa-list"></i>Your Personal Action Plan is ready!
+  # <i class="fa-thin fa-list"></i>Your Court Guide Action Plan is ready!
 subquestion: |
-  
-  Your Personal Action Plan for changing your custody or parenting plan in ${ len(step_list) } steps.
+  #### Your Action Plan for enforcing your custody or Parenting Plan order in ${ len(step_list) } steps
 
   % if get_config("debug", False):
   <button id="akc_expand_all" class="btn other stuff">Expand all</button>
@@ -80,11 +83,11 @@ code: |
 ---
 template: wrong_tf
 subject: |
-  Step ${ wrong_tf_idx }: Try another Guided Assistant interview
+  Step ${ wrong_tf_idx }: Try another Court Guide Action Plan
 content: | 
   * [Changing your custody or Parenting Plan order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
   * [Responding if Your Spouse Starts a Custody Case](https://docassemble.akcourts.gov/start/docassemble-RespondingChildCustody)
-  * [Asking for for a Custody Order](https://ddocassemble.AKcourts.gov/start/AskingForChildCustody)
+  * [Asking for a Custody Order](https://ddocassemble.AKcourts.gov/start/AskingForChildCustody)
   * [Changing or Enforcing Child Support ](https://docassemble.AKcourts.gov/start/ ChangingEnforcingChildSupport)
 --- 
 template: wrong_tf2
@@ -106,21 +109,21 @@ template: child_support_step
 subject: |
   Step ${ child_support_idx }: Enforcing a child support order
 content: |
-  Get information from the court website about enforcing a child support order: [Enforce a Child Support Order](http://courts.alaska.gov/shc/family/shcenforce.htm#child-support).
+  Get information about enforcing a child support order: [Enforce a Child Support Order](http://courts.alaska.gov/shc/family/shcenforce.htm#child-support).
   
-  Use the Guided Assistant interview: [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforcingChildSupport).
+  Use the Court Guide Action Plan: [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforcingChildSupport).
 ---
 template: visitation_step
 subject: |
   Step ${ visitation_idx }: Enforcing a visitation schedule order
 content: |
-  Get information from the court website about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](https://courts.alaska.gov/shc/family/shcenforce.htm#visits).
+  Get information about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](https://courts.alaska.gov/shc/family/shcenforce.htm#visits).
 ---
-template: other_order_step
+template:  other_order_step
 subject: |
   Step ${ other_order_idx }: Enforcing another court order
 content: |
-  Get information from the court website about enforcing an other court order. [Enforce an Order (not money)](https://courts.alaska.gov/shc/family/shcenforce.htm#forms).
+  Get information about enforcing another court order. [Enforce an Order (not money)](https://courts.alaska.gov/shc/family/shcenforce.htm#forms).
 ---
 template: other_parts_step
 subject: |
