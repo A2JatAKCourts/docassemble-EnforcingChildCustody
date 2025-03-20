@@ -24,7 +24,8 @@ Scenario: Row #3
     And I should see the phrase "Your Action Plan for enforcing your custody or Parenting Plan order in 2 steps"
     And I should see the phrase "Enforcing a child support order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case"  
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf" 
     And I download "enforcing_child_custody_action_plan.docx" 
     
@@ -37,7 +38,8 @@ Scenario: Row #4
     And I should see the phrase "Your Action Plan for enforcing your custody or Parenting Plan order in 2 steps"
     And I should see the phrase "Enforcing a visitation schedule order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case" 
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf" 
     And I download "enforcing_child_custody_action_plan.docx"
     
@@ -50,7 +52,8 @@ Scenario: Row #5
     And I should see the phrase "Your Action Plan for enforcing your custody or Parenting Plan order in 2 steps"
     And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case" 
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf" 
     And I download "enforcing_child_custody_action_plan.docx"
 
@@ -65,7 +68,8 @@ Scenario: Row #6
     And I should see the phrase "Enforcing a child support order"
     And I should see the phrase "Enforcing a visitation schedule order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case" 
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf" 
     And I download "enforcing_child_custody_action_plan.docx" 
 
@@ -80,7 +84,8 @@ Scenario: Row #7
     And I should see the phrase "Enforcing a child support order"
     And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case" 
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf" 
     And I download "enforcing_child_custody_action_plan.docx"
 
@@ -97,7 +102,8 @@ Scenario: Row #8
     And I should see the phrase "Enforcing a visitation schedule order"
     And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case" 
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf"
     And I download "enforcing_child_custody_action_plan.docx"
     
@@ -114,6 +120,7 @@ Scenario: Row #9
     And I should see the phrase "Enforcing a visitation schedule order"
     And I should see the phrase "Enforcing another court order"
     And I should see the phrase "Get more information or help"
-#   And I should see the phrase "Learn about other parts of a custody case"
+#   And I should see the phrase "Learn about other parts of a custody case" 
+    And I take a screenshot
     And I download "enforcing_child_custody_action_plan.pdf"
     And I download "enforcing_child_custody_action_plan.docx"
