@@ -217,6 +217,7 @@ attachment:
     filename: enforcing_child_custody_action_plan
     variable name: enforcing_child_custody_attachment[i]
     skip undefined: True
+    update references: True
     docx template file: enforcing_child_custody_action_plan.docx
     tagged pdf: True
 ---
@@ -225,4 +226,5 @@ attachment:
     filename: enforcing_child_custody_action_plan
     variable name: docx_enforcing_child_custody_attachment
     skip undefined: True
+    update references: True
     docx template file: enforcing_child_custody_action_plan.docx
