@@ -105,7 +105,7 @@ id: Enforcing a Child Custody or Parenting Plan Order
 question: |
   Enforcing a Child Custody or Parenting Plan Order
 subquestion: |
-  This Guided Assistant asks you questions and uses your answers to build a Personal Action Plan - a list of steps to help you with changing or enforcing child support in Alaska.
+  This Court Guide asks you questions and uses your answers to build a Personal Action Plan - a list of steps to help you with changing or enforcing child support in Alaska.
   
   Custody and Parenting Plan orders have different parts. Which parts do you want information about?  
 fields:
@@ -121,13 +121,13 @@ id: who ordered
 question: |
   Who ordered your child support?
 subquestion: |
-  If your children’s other parent is not paying the Child Support they were ordered to pay, you can ask CSSD or the Court for help.
+  If your children’s other parent is not paying the Child Support they were ordered to pay, you can ask Child Support Enforcement Division (CSED) or the Court for help.
 fields:
   - no label: who_ordered
     input type: radio
     choices:
       - The court.: court
-      - Child Support Services Division (CSSD).: cssd
+      - Child Support Enforcement Division (CSED).: cssd
   - note: |
       #### <i class="fa-regular fa-lightbulb"></i> Learn more ####
     
@@ -135,9 +135,9 @@ fields:
         If the court ordered Child Support they probably used the 9 page Child Support Order form. Look for the form number in the lower left corner of your order. 
 
        <div class = 'step-subheading'>From  changing child support interview</div>
-        *	Look at the top of your child support order to see if it was ordered by the Alaska Court System or Child Support Services Division.
-        * Look for your name in [CourtView](https://records.courts.alaska.gov/eaccess/home.page.2), the Alaska Court System’s list of public court cases. Open up your divorce or custody case.  See if there is an entry for a “child support order
-        * Contact [Child Support Services Division](https://childsupport.alaska.gov/child-support-services/contact-us) and ask them.
+        *	Look at the top of your child support order to see if it was ordered by the Alaska Court System or Child Support Enforcement Division.
+        * Look for your name in [CourtView](https://ak-courts.info/courtview), the Alaska Court System’s list of public court cases. Open up your divorce or custody case.  See if there is an entry for a “child support order
+        * Contact [Child Support Enforcement Division](https://childsupport.alaska.gov/child-support-services/contact-us) and ask them.
 ---
 id: preview EnforcingChildCustody
 question: |
@@ -169,7 +169,7 @@ review:
       ${ order_type['other'] }
   - Edit: user_need
     button: |
-      **want t his info?**:
+      **want this info?**:
       ${ word(yesno(user_need)) }
 ---
 #  id: download EnforcingChildCustody
