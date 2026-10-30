@@ -85,18 +85,18 @@ template: wrong_tf
 subject: |
   Step ${ wrong_tf_idx }: Try another Court Guide Action Plan
 content: | 
-  * [Changing your custody or Parenting Plan order](https://docassemble.akcourts.gov/start/docassemble-ChangingChildCustody )
-  * [Responding if Your Spouse Starts a Custody Case](https://docassemble.akcourts.gov/start/docassemble-RespondingChildCustody)
-  * [Asking for a Custody Order](https://ddocassemble.AKcourts.gov/start/AskingForChildCustody)
-  * [Changing or Enforcing Child Support ](https://docassemble.AKcourts.gov/start/ ChangingEnforcingChildSupport)
+  * [Changing your custody or Parenting Plan order](https://courtguide.akcourts.gov/start/ChangingChildCustody/ )
+  * [Responding if Your Spouse Starts a Custody Case](https://courtguide.akcourts.gov/start/RespondingChildCustody)
+  * [Asking for a Custody Order](https://courtguide.akcourts.gov/start/AskingForChildCustody/)
+  * [Changing or Enforcing Child Support ](https://courtguide.akcourts.gov/start/ChangingEnforcingChildSupport/)
 --- 
 template: wrong_tf2
 subject: | 
   Step ${ wrong_tf2_idx }: Look at the court's self-help web pages
 content: | 
-  * [Forms and Information about Child Support](https://courts.alaska.gov/shc/family/support.htm)
-  * [Asking for an Order / filing a motion](https://courts.alaska.gov/shc/family/motions.htm)
-  * [Family Law Home](https://courts.alaska.gov/shc/family)
+  * [Forms and Information about Child Support](https://ak-courts.info/csinfo)
+  * [Asking for an Order / filing a motion](https://ak-courts.info/mot)
+  * [Family Law Home](https://ak-courts.info/family)
   
   <div class = ''>And yet to be developed or discovered</div>
     * Custody When Both Parents Agree
@@ -109,35 +109,35 @@ template: child_support_step
 subject: |
   Step ${ child_support_idx }: Enforcing a child support order
 content: |
-  Get information about enforcing a child support order: [Enforce a Child Support Order](http://courts.alaska.gov/shc/family/shcenforce.htm#child-support).
+  Get information about enforcing a child support order: [Enforce a Child Support Order](https://ak-courts.info/enforce#child-support).
   
-  Use the Court Guide Action Plan: [Changing or Enforcing a Child Support Order in Alaska](https://docassemble.akcourts.gov/start/ChangingEnforcingChildSupport).
+  Use the Court Guide Action Plan: [Changing or Enforcing a Child Support Order in Alaska](https://courtguide.akcourts.gov/start/ChangingEnforcingChildSupport/).
 ---
 template: visitation_step
 subject: |
   Step ${ visitation_idx }: Enforcing a visitation schedule order
 content: |
-  Get information about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](https://courts.alaska.gov/shc/family/shcenforce.htm#visits).
+  Get information about enforcing an order to follow a visitation schedule. [Enforce a Visitation Schedule Order](https://ak-courts.info/enforce#visits).
 ---
 template:  other_order_step
 subject: |
   Step ${ other_order_idx }: Enforcing another court order
 content: |
-  Get information about enforcing another court order. [Enforce an Order (not money)](https://courts.alaska.gov/shc/family/shcenforce.htm#forms).
+  Get information about enforcing another court order. [Enforce an Order (not money)](https://ak-courts.info/enforce#forms).
 ---
 template: other_parts_step
 subject: |
   Step ${ other_parts_idx }: Learn about other parts of a custody case
 content: |
-  <div class='step-subheading'>More Guided Assistants</div>
-  <p><a href = "https://docassemble.akcourts.gov/start/RespondingInChildCustody">Responding if your spouse starts a custody case</a></p>
-    <p><a href = "https://docassemble.akcourts.gov/start/ChangingChildCustody">Changing a custody order</a></p>
+  <div class='step-subheading'>More Court Guides</div>
+  <p><a href = "https://courtguide.akcourts.gov/start/RespondingInChildCustody">Responding if your spouse starts a custody case</a></p>
+    <p><a href = "https://courtguide.akcourts.gov/start/ChangingChildCustody">Changing a custody order</a></p>
     
   <div class='step-subheading'>Self-Help Center: Family Law</div>
   
-  <p><a href = "https://courts.alaska.gov/shc/family/answer.htm">Responding to a Custody Case</a></p>
-  <p><a href = "https://courts.alaska.gov/shc/family/motions.htm">Asking for an Order/filing a motion</a></p>
-  <p><a href = "https://courts.alaska.gov/shc/family/shcplan.htm">Creating a Parenting Plan</a></p>
+  <p><a href = "https://ak-courts.info/respond">Responding to a Custody Case</a></p>
+  <p><a href = "https://ak-courts.info/mot">Asking for an Order/filing a motion</a></p>
+  <p><a href = "https://ak-courts.info/parentingplan">Creating a Parenting Plan</a></p>
   <p><a href = "https://courts.alaska.gov/shc/family/shctrial.htm">Getting Ready for a Hearing or Trial</a></p>
-  <p><a href = "https://courts.alaska.gov/shc/family/shcmodify.htm">Changing a Custody / Support Order</a></p>
+  <p><a href = "https://ak-courts.info/mtm">Changing a Custody / Support Order</a></p>
 
